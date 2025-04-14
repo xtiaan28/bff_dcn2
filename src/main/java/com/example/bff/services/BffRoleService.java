@@ -8,7 +8,7 @@ public interface BffRoleService {
 
     Object createOrGetRoles(Map<String, String> query);
 
-    Object updateRol(Long id, Map<String, String> rol);
+    String updateRol(Map<String, String> rol);
 
-    Object deleteRol(Long id);
+    String deleteRol(Long id);
 }

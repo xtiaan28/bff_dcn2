@@ -21,11 +21,11 @@ public class BffRoleServiceImpl implements BffRoleService {
         return rolesRest.createOrGetRoles(query);
     }
 
-    public Object updateRol(Long id, Map<String, String> rol) {
-        return rolesRest.updateRol(id, rol);
+    public String updateRol(Map<String, String> rol) {
+        return rolesRest.updateRol(rol);
     }
 
-    public Object deleteRol(Long id) {
+    public String deleteRol(Long id) {
         return rolesRest.deleteRol(id);
     }
 }

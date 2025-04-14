@@ -25,9 +25,9 @@ public class BffRoleController {
         return ResponseEntity.ok(bffRoleService.createOrGetRoles(query));
     }
 
-    @PostMapping("/UpdateRole")
-    public ResponseEntity<?> updateRol(@PathVariable Long id, @RequestBody Map<String, String> rol) {
-        return ResponseEntity.ok(bffRoleService.updateRol(id, rol));
+    @PutMapping("/UpdateRole")
+    public ResponseEntity<?> updateRol(@RequestBody Map<String, String> rol) {
+        return ResponseEntity.ok(bffRoleService.updateRol(rol));
     }
 
     @DeleteMapping("/roles/{id}")
