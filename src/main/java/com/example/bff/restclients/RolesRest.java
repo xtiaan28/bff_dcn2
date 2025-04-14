@@ -12,7 +12,7 @@ public interface RolesRest {
     @PostMapping("/graphql")
     Object createOrGetRoles(@RequestBody Object query);
 
-    @PutMapping("/UpdateRole")
+    @PutMapping("/UpdateRole/{id}")
     Object updateRol(@PathVariable("id") Long id, @RequestBody Object rol);
 
     @DeleteMapping("/roles/{id}")
