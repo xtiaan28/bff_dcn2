@@ -10,15 +10,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BffAzureServiceImpl implements BffAzureService{
+public class BffAzureServiceImpl implements BffAzureService {
     @Autowired
-	private ClientRest clientRest;
+    private ClientRest clientRest;
 
     public List<Object> getAllUsers() {
         return clientRest.getAllUsers();
     }
 
+    public Object getUserById(Long id) {
+        return clientRest.getUserById(id);
+    }
+
     public Object createUser(Map<String, String> user) {
         return clientRest.createUser(user);
     }
+
+    public Object updateDeleteUser(Map<String, String> query) {
+        return clientRest.updateDeleteUser(query);
+    }
+
 }
