@@ -15,7 +15,7 @@ public interface RolesRest {
     @PutMapping("/UpdateRole")
     String updateRol(@RequestBody Object rol);
 
-    @DeleteMapping("/roles/{id}")
-    String deleteRol(@PathVariable("id") Long id);
+    @DeleteMapping("/roles/{id}?code={code}")
+    String deleteRol(@PathVariable("id") Long id,  @PathVariable("code") String code);
 
 }

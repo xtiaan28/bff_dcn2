@@ -25,7 +25,9 @@ public class BffRoleServiceImpl implements BffRoleService {
         return rolesRest.updateRol(rol);
     }
 
+    private String functionKey;
     public String deleteRol(Long id) {
-        return rolesRest.deleteRol(id);
+        functionKey ="test";
+        return rolesRest.deleteRol(id, functionKey);
     }
 }
