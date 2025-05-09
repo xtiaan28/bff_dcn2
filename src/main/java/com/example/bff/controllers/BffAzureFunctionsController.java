@@ -32,6 +32,11 @@ public class BffAzureFunctionsController {
         return ResponseEntity.ok(bffService.createUser(user));
     }
 
+    @PostMapping("/CreateUserWithDefaultRole")
+    public ResponseEntity<?> CreateUserWithDefaultRole(@RequestBody Map<String, String> user) {
+        return ResponseEntity.ok(bffService.CreateUserWithDefaultRole(user));
+    }
+
     @PostMapping("/graphql-users")
     public ResponseEntity<?> updateDeleteUser(@RequestBody Map<String, String> query) {
         return ResponseEntity.ok(bffService.updateDeleteUser(query));

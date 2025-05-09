@@ -11,6 +11,8 @@ public interface BffAzureService {
 
     Object createUser(Map<String, String> user);
 
+    Object CreateUserWithDefaultRole(Map<String, String> user);
+
     Object updateDeleteUser(Map<String, String> query);
 
 }

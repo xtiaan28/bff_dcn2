@@ -26,6 +26,10 @@ public class BffAzureServiceImpl implements BffAzureService {
         return clientRest.createUser(user);
     }
 
+    public Object CreateUserWithDefaultRole(Map<String, String> user) {
+        return clientRest.CreateUserWithDefaultRole(user);
+    }
+    
     public Object updateDeleteUser(Map<String, String> query) {
         return clientRest.updateDeleteUser(query);
     }

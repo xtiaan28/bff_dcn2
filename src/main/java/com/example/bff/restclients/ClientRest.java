@@ -20,6 +20,9 @@ public interface ClientRest {
     @PostMapping("/CreateUser")
     Object createUser(@RequestBody Object user);
 
+    @PostMapping("/CreateUserWithDefaultRole")
+    Object CreateUserWithDefaultRole(@RequestBody Object user);
+
     @PostMapping("/graphql-users")
     Object updateDeleteUser(@RequestBody Object user);
 }
